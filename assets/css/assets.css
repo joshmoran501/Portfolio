@@ -63,7 +63,6 @@ article p {
 }
 
 #avatar {
-    display: flex;
     justify-items: flex-end;
     align-self: center;
     max-width: 25%;
@@ -83,21 +82,19 @@ section {
     margin: 1%;
 }
 
-
-
 section a {
-    flex-flow: column wrap;
     position: relative;
     text-decoration: none;
 }
 
-section a img {
+section img {
     border-style: solid;
     border-color: lightblue;
     border-width: 3%;
     border-radius: 5px;
 }
 
+/* text overlay for project images/links */
 .textbox {
     position: absolute;
     bottom: 30px;
@@ -116,15 +113,25 @@ section a img {
     font-size: 1.1em;
 }
 
-.projectgrid #project1 img {
+#project1 img {
     width: 96.5%;
+    position: relative;
+    opacity: 80%;
 }
+
+
+
 
 #project2 img, #project3 img, #project4 img, #project5 img {
     width: 48%;
-    max-height: 250px;
+    height: auto;
+    opacity: 80%;
 }
 
+#project1 img:hover, #project2 img:hover, #project3 img:hover,#project4 img:hover, #project5 img:hover {
+    opacity: 100%;
+
+}
 
 footer {
     display: flex;
@@ -156,9 +163,10 @@ footer ul li a {
 }
 
 
+/* Smaller screen changes, about me section now column flex instead of row */
 @media screen and (max-width: 768px) {
-    header {
-        font-size: smaller;
+    header,footer,.textbox {
+        font-size: 75%;
     }
     
     h2 {
@@ -176,6 +184,7 @@ footer ul li a {
 
     }
 
+    /* Changed position of avatar to be before about me on smaller screens */
     #avatar {
         display: none;
     }
@@ -193,9 +202,7 @@ footer ul li a {
         margin: 1%
     }
 
-    
     section {
         flex-direction: column;
     }
 }
-    
