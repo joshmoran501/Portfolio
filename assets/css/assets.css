@@ -47,31 +47,20 @@ h2 {
     font-size: x-large;
 }
 
-article {
-    display: flex;
-    flex-direction: row;
-    margin: 1%;
-    justify-content: space-between;
-}
 
 #smallScreenAvatar {
     display: none;
 }
 
-article p {
-    align-content:flex-start;
-}
 
 #avatar {
-    justify-items: flex-end;
-    align-self: center;
-    max-width: 25%;
     height: fit-content;
     border-style: solid;
     border-width: .5em;
     border-color: lightblue;
     border-radius: 0 0 15px 0 ;
-    margin: 1%
+    margin: 1%;
+    padding: 0;
 }
 
 section {
@@ -96,9 +85,11 @@ section img {
 
 /* text overlay for project images/links */
 .textbox {
+    max-width: 35%;
     position: absolute;
-    bottom: 30px;
-    left: 0px; background-color: lightblue;
+    bottom: 10%;
+    left: 0px; 
+    background-color: lightblue;
     border: 10px solid lightblue;
     border-radius: 0 5px 5px 0;
     text-decoration: none;
@@ -106,31 +97,32 @@ section img {
 }
 
 .textbox h3 {
-    font-size: 1.6em;
+    font-size: 1.2em;
 }
 
 .textbox p {
-    font-size: 1.1em;
+    font-size: 1em;
 }
 
 #project1 img {
-    width: 96.5%;
+    width: 100%;
     position: relative;
-    opacity: 80%;
+    opacity: 70%;
+}
+
+#project2, #project3, #project4, #project5 {
+    padding: 0;
 }
 
 
-
-
 #project2 img, #project3 img, #project4 img, #project5 img {
-    width: 48%;
-    height: auto;
+    width: 100%;
+    height: 100%;
     opacity: 80%;
 }
 
 #project1 img:hover, #project2 img:hover, #project3 img:hover,#project4 img:hover, #project5 img:hover {
     opacity: 100%;
-
 }
 
 footer {
@@ -142,12 +134,16 @@ footer {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    height: 75px
+    height: 75px;
 }
 
 footer h3 {
     padding: .5%;
     align-items: center;
+    margin: 0;
+}
+footer ul {
+    margin: 0;
 }
 
 footer ul li {
@@ -160,49 +156,4 @@ footer ul li {
 
 footer ul li a {
     color: white;
-}
-
-
-/* Smaller screen changes, about me section now column flex instead of row */
-@media screen and (max-width: 768px) {
-    header,footer,.textbox {
-        font-size: 75%;
-    }
-    
-    h2 {
-        align-self: center;
-        border-bottom-style: solid;
-        border-right: 0;
-        border-bottom: 1%;
-        border-color: lightblue;
-        margin-right: 0;
-        margin-bottom: 1%;
-    }
-    
-    article {
-        flex-direction: column;
-
-    }
-
-    /* Changed position of avatar to be before about me on smaller screens */
-    #avatar {
-        display: none;
-    }
-
-    #smallScreenAvatar {
-        display: flex;
-        justify-items: flex-end;
-        align-self: center;
-        max-width: 40%;
-        height: fit-content;
-        border-style: solid;
-        border-width: .5em;
-        border-color: lightblue;
-        border-radius: 0 0 15px 0 ;
-        margin: 1%
-    }
-
-    section {
-        flex-direction: column;
-    }
 }

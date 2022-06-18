@@ -3,6 +3,7 @@
     <!-- meta data -->
     <head>
         <meta charset="UTF-8" meta name="viewport" content="width-device-width, initial-scale=1, minimum-scale=1"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <link rel="stylesheet" href="./assets/css/reset.css">
         <link rel="stylesheet" href="./assets/css/assets.css">
         <title>Joshua Moran Portfolio</title>
@@ -28,62 +29,64 @@
 
         <Main>
             <!-- About me section, on smaller screens the avatar image comes before h2 and text, on larger screens it comes after -->
-            <article>
-                <img id="smallScreenAvatar" src="./assets/Images/lightsaber lemur.jpg" alt="">
-                <h2>About Me</h2>
-                <div>
-                    <p>Hello, my name is Joshua Moran. I am in training to become a full-stack developer in the Georgia Tech Coding Boot Camp. I am proficient in HTML and CSS, and will be learning JavaScript, front-end development, database development, server-side development, quality assurance and deployment. </p> 
-                    <br>
-                    <p>I have a Master’s in Primate Behavior and undergraduate degrees in neuroscience and biology, not exactly tech-oriented degrees, right? Many of the skills I learned are applicable, however, including problem-solving, analyzing data, and effective communication skills.</p> 
-                    <br>
-                    <p>Outside of work, I am a huge Star Wars fan! I have been collecting memorabilia since I was 3 years old and travel around the country to attend Star Wars conventions! Also, I am an avid gamer. I play mostly shooters and strategy games. Destiny 2 is my favorite game, mostly for the social aspects. I have made many great friends through Destiny! Finally, I am a big animal lover! My education and previous positions have all been centered around primate behavior, and while I no longer am in the field, I still love my primates and love educating people about them!</p> 
-                    </p>
+            <div class="row">
+                <h2 id="About_Me" class="col-2">About Me</h2>
+                <div class="col-6">
+                        <p>Hello, my name is Joshua Moran. I am in training to become a full-stack developer in the Georgia Tech Coding Boot Camp. I am proficient in HTML and CSS, and will be learning JavaScript, front-end development, database development, server-side development, quality assurance and deployment. </p> 
+                        <br>
+                        <p>I have a Master’s in Primate Behavior and undergraduate degrees in neuroscience and biology, not exactly tech-oriented degrees, right? Many of the skills I learned are applicable, however, including problem-solving, analyzing data, and effective communication skills.</p> 
+                        <br>
+                        <p>Outside of work, I am a huge Star Wars fan! I have been collecting memorabilia since I was 3 years old and travel around the country to attend Star Wars conventions! Also, I am an avid gamer. I play mostly shooters and strategy games. Destiny 2 is my favorite game, mostly for the social aspects. I have made many great friends through Destiny! Finally, I am a big animal lover! My education and previous positions have all been centered around primate behavior, and while I no longer am in the field, I still love my primates and love educating people about them!</p> 
+                        </p>
                 </div>
-                <img id="avatar" src="./assets/Images/lightsaber lemur.jpg" alt="Joshua Moran bio picture">
-            </article>
+                <img id="avatar" class="col-3" src="./assets/Images/lightsaber lemur.jpg" alt="Joshua Moran bio picture">
+            </div>
             <br>
             
             <!-- Work examples. will add links and appropriate pictures as I have things to add -->
-            <section> 
-                <h2>Work Examples</h2>
-                    <div>
-                        <a id="project1" href="#">
-                            <img  src="https://via.placeholder.com/200x100" alt="placeholder 1"> 
-                                <rect class="overlay"> </rect> 
-                                <div class="textbox">
-                                    <h3>Project 1</h3>
-                                    <p>Coming Soon</p>
-                                </div>
-                        </a>
-                        <a id="project2" href="#">
-                            <img  src="https://via.placeholder.com/200" alt="placeholder 2">
+            <section class="row"> 
+                <h2 class="col-2" id="Work_Examples">Work Examples</h2>
+                <div class="col-9">
+                    <a class="row" id="project1" href="https://sophiadelarosa.github.io/group-project/">
+                        <img  src="./assets/Images/spotify-icon-green-logo-8.png" alt="IMDA app"> 
                             <div class="textbox">
-                                <h3>Project 2</h3>
-                                <p>Coming Soon</p>
+                                <h3>IMDA</h3>
+                                <p>Spotify API app</p>
                             </div>
-                        </a>
-                        <a id="project3"  href="#">
-                            <img src="https://via.placeholder.com/200" alt="placeholder 3">
-                            <div class="textbox">
-                                <h3>Project 3</h3>
-                                <p>Coming Soon</p>
-                            </div>
-                        </a>
-                        <a id="project4" href="#">
-                            <img  src="https://via.placeholder.com/200" alt="placeholder 4">
-                            <div class="textbox">
-                                <h3>Project 4</h3>
-                                <p>Coming Soon</p>
-                            </div>
-                        </a>
-                        <a id="project5" href="#">
-                            <img src="https://via.placeholder.com/200" alt="placeholder 5">
-                            <div class="textbox">
-                                <h3>Project 5</h3>
-                                <p>Coming Soon</p>
-                            </div>
-                        </a>
-                    </div>
+                    </a>
+                <div class="row">
+                    <a class="col" id="project2" href="#">
+                        <img  src="./assets/Images/weather.png" alt="weather app">
+                        <div class="textbox">
+                            <h3>Weather app</h3>
+                            <p>OpenWeather API app</p>
+                        </div>
+                    </a>
+                    <a class="col" id="project3"  href="#">
+                        <img src="https://via.placeholder.com/200" alt="placeholder 3">
+                        <div class="textbox">
+                            <h3>Project 3</h3>
+                            <p>Coming Soon</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="row">
+                    <a class="col" id="project4" href="#">
+                        <img  src="https://via.placeholder.com/200" alt="placeholder 4">
+                        <div class="textbox">
+                            <h3>Project 4</h3>
+                            <p>Coming Soon</p>
+                        </div>
+                    </a>
+                    <a class="col" id="project5" href="#">
+                        <img src="https://via.placeholder.com/200" alt="placeholder 5">
+                        <div class="textbox">
+                            <h3>Project 5</h3>
+                            <p>Coming Soon</p>
+                        </div>
+                    </a>
+                </div>
+                </div>
             </section>
         </Main>
         <br>
